@@ -6,5 +6,5 @@
 * [优秀插件介绍及使用](Helper相关.md)
 * [待整理](传参数.md)
 * views相关
-* AJAX
+* [AJAX](ajax.md)
 
