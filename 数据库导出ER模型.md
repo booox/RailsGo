@@ -40,3 +40,12 @@ rake db:drop db:create db:migrate db:seed
 # foodPackage 为键名，且对应表
 <%= simple_form_for :foodPackage, as: :post, url: console_merchant_restaurant_food_packages_path do |f| %>
 ```
+
+## 更新时
+```
+# foodPackage 负责回传数据，当与form_for 命名相同时
+  def edit
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @foodPackage = @restaurant.food_packages.find(params[:id])
+  end
+```
