@@ -13,3 +13,30 @@
 ```
 rake db:drop db:create db:migrate db:seed
 ```
+
+## 为关联表，新建项目
+```
+  def create
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @foodPackage = @restaurant.food_packages.build(foodPackage_params)
+
+    if @foodPackage.save
+      redirect_to console_merchant_path(params[:merchant_id]), notice: "恭喜您，创建餐厅成功！"
+    else
+      render edit_console_merchant_restaurant_food_package_path,  warning: "提交失败，请重新提交"
+    end
+  end
+
+  private
+
+  def foodPackage_params
+    params.require(:post).permit(:name, :use_number, :before_price, :discount_price,
+                                 :discount, :is_refund, :is_advance, :sweet_tips, :status, :normal, :stopping )
+  end
+```
+
+## 新建表格书写
+```
+# foodPackage 为键名，且对应表
+<%= simple_form_for :foodPackage, as: :post, url: console_merchant_restaurant_food_packages_path do |f| %>
+```
