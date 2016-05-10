@@ -49,3 +49,7 @@ rake db:drop db:create db:migrate db:seed
     @foodPackage = @restaurant.food_packages.find(params[:id])
   end
 ```
+
+```
+# 编辑的数据默认传回 params.require(:命名).permit(:name, :...)
+```
