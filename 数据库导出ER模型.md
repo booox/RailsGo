@@ -51,5 +51,6 @@ rake db:drop db:create db:migrate db:seed
 ```
 
 ```
-# 编辑的数据默认传回 params.require(:命名).permit(:name, :...)
+# form_for 编辑的数据默认传回 
+params.require(:命名).permit(:name, :...)
 ```
