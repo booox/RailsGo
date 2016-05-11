@@ -7,5 +7,5 @@
 * [待整理](传参数.md)
 * views相关
 * [AJAX](ajax.md)
-* Controller
+* [Controller](controller.md)
 
