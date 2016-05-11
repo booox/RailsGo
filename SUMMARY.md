@@ -9,5 +9,5 @@
 * views相关
 * [AJAX](ajax.md)
 * [Controller](controller.md)
-* 用Helper瘦身
+* [用Helper瘦身](合理使用Helper.md)
 
