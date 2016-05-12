@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Rails学习资料
 * [First Chapter](chapter1.md)
 * [DataBase](数据库导出ER模型.md)
    * [Module](module.md)
