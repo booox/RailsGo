@@ -9,7 +9,7 @@
 * [Controller](controller.md)
 * [用Helper瘦身](合理使用Helper.md)
 * [DataBase](数据库导出ER模型.md)
-   * [Module](module.md)
 * 学习资料
+* [Module](module.md)
 * Database
 
