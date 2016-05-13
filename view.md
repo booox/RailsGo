@@ -4,3 +4,8 @@
 f[:id]
 f.id
 f["id"]
+
+-button_to 添加参数
+```
+params: { state: :submitted }
+```
