@@ -1,6 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
+* 运行环境
+   * 运行环境
 * [一、学习资料](学习资料.md)
 * [二、优秀插件介绍及使用](Helper相关.md)
 * [待整理](传参数.md)
@@ -11,6 +13,4 @@
 * [DataBase](数据库导出ER模型.md)
 * [Module](module.md)
 * Database
-* 运行环境
-   * 运行环境
 
