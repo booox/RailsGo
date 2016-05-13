@@ -4,7 +4,7 @@
 * [零、运行环境](yun_xing_huan_jing.md)
 * [一、学习资料](学习资料.md)
 * [二、优秀插件介绍及使用](Helper相关.md)
-* 三、MVC交互
+* [三、MVC交互](MVC模型.md)
 * [待整理](传参数.md)
 * [views相关](view.md)
 * [AJAX](ajax.md)
