@@ -7,3 +7,8 @@ class Product < ActiveRecord::Base
 end
 ```
 
+## rails console 查询
+```
+first_user = User.first  # 查询第一个用户资料
+first_user.microposts  # 查询关联表
+```
