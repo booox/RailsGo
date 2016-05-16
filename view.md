@@ -64,6 +64,8 @@ require File.expand_path('../boot', __FILE__)
 @import "bootstrap";
 ```
 
+- [由于引用两次ujs导致remote submit twith](http://stackoverflow.com/questions/7411271/form-submitted-twice-due-to-remote-true)
+
 ## 文件存放路径
 ```
 app/assets  # 存放当前程序用到的资源文件
