@@ -64,3 +64,21 @@ describe "Static pages" do
     end
 end
 ```
+
+## 测试代码重构
+```
+describe "Home page" do
+before { visit root_path }  # 使用before 代替重复的代码
+it "should have the content 'Sample App'" do
+expect(page).to have_content('Sample App')
+end
+it "should have the base title" do
+expect(page).to have_title("Ruby on Rails Tutorial Sample App")
+end
+it "should not have a custom page title" do
+expect(page).not_to have_title('| Home')
+end
+end
+```
+
+let 方法，只要指定就会创建一个局部变量，visit/click_link 函数（177页）
