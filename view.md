@@ -92,3 +92,8 @@ Bootstrap 中有颜色变量，以@开头，可直接在 SCSS 中替换$ 使用
   <li class="<%= 'active' if params[:controller] == 'controller3' %>"> <a href="/link">Link</a> </li>        
 </ul>
 ```
+
+## button_to
+```
+:disable_with => "Submitting...."
+```
