@@ -64,6 +64,8 @@ require File.expand_path('../boot', __FILE__)
 @import "bootstrap";
 ```
 
+- [由于引用两次ujs导致remote submit twith](http://stackoverflow.com/questions/7411271/form-submitted-twice-due-to-remote-true)
+
 ## 文件存放路径
 ```
 app/assets  # 存放当前程序用到的资源文件
@@ -91,4 +93,9 @@ Bootstrap 中有颜色变量，以@开头，可直接在 SCSS 中替换$ 使用
   <li class="<%= 'active' if params[:controller] == 'controller2' %>"> <a href="/link">Link</a> </li>
   <li class="<%= 'active' if params[:controller] == 'controller3' %>"> <a href="/link">Link</a> </li>        
 </ul>
+```
+
+## button_to
+```
+:disable_with => "Submitting...."
 ```
