@@ -4,7 +4,7 @@
 
 - [Code School RSpec](https://www.codeschool.com/courses/testing-with-rspec)
 - [How We Test Rails Applications](https://robots.thoughtbot.com/how-we-test-rails-applications)
-- [RubyDOC-Capybar](http://www.rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Finders)
+- [rubydoc-capybar](http://www.rubydoc.info/github/jnicklas/capybara/master/capybara/node/finders)
 
 ## 测试
 

@@ -1,5 +1,12 @@
 # Ruby 基础知识
 
+## 进入环境
+```
+irb #进入Ruby环境
+puts #打印结果
+7.class => Fixnum  # 在Ruby裡面，萬物皆有類別。通过`XX.class`查看
+```
+
 - 字符串
 ```
 ""  # 用双引号创建「字面量字符串」
@@ -43,6 +50,8 @@ a << 7  # 尾部添加
 a << "foo" << "bar"  # 串联添加
 
 a.join(',')  # 连接操作
+
+Array 可以直接相加
 ```
 
 - Range
@@ -117,8 +126,13 @@ p :name  # :name
 
 ```
 
-- 方法
+## 方法
 ```
+# 定义方法
+def 方法名称(参数)
+  方法内容
+end
+
 "foobar.length"  # 6 调用方法
 
 "".empty?  # true
@@ -186,3 +200,5 @@ Rails 中视图可自动获取
 # mass assignment 技术，用 Hash 初始化对象
 user = User.new(name: "Michael Hartl", email: "mhartl@example.com")
 ```
+
+

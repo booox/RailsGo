@@ -14,3 +14,15 @@ rails generate controller StaticPages home help --no-test-framework
 # 撤销生成
 rails destroy  controller FooBars baz quux
 ```
+
+## 获得数据
+- 从关链表中取出数据
+```
+def show
+    @group = Group.find(params[:id])
+    @posts = @group.posts
+end
+```
+
+## 写入数据库
+- `build(app)` = `new(app)` # 别名？
