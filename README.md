@@ -10,7 +10,7 @@
 
 ## 本书地址
 
-- [Rails边学边记 On GitBook](www.gitbook.com/book/boboidream/railsgo)
+- [Rails边学边记 On GitBook](https://boboidream.gitbooks.io/railsgo/content/)
 
 ## 版本更新
 
