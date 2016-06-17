@@ -26,3 +26,9 @@ end
 
 ## 写入数据库
 - `build(app)` = `new(app)` # 别名？
+
+
+## 更新某属性
+```
+ user.update_attribute :admin, true
+```
