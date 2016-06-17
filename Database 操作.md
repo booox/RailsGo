@@ -58,3 +58,5 @@ module MerchantHelper
 
 end
 ```
+
+*as json 后一定要 ["双引号引用"]*
