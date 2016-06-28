@@ -3,7 +3,8 @@
 ## 资料
 
 - [Code School RSpec](https://www.codeschool.com/courses/testing-with-rspec)
-
+- [How We Test Rails Applications](https://robots.thoughtbot.com/how-we-test-rails-applications)
+- [rubydoc-capybar](http://www.rubydoc.info/github/jnicklas/capybara/master/capybara/node/finders)
 
 ## 测试
 
