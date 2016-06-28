@@ -13,4 +13,7 @@ rails generate controller StaticPages home help --no-test-framework
 
 # 撤销生成
 rails destroy  controller FooBars baz quux
+
+# 生成 Restful Controller
+rails generate controller webapp/resumes index create new destroy show
 ```
