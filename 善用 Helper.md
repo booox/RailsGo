@@ -19,3 +19,6 @@ end
  
 3. 引用时，在 `Controller` 中的 `Class` 上，引用 `include  IssuesHelper`
 4. 可传参数
+
+## help_method
+什么是 helper_method？ 如果将方法设置为 helper_method，那就意味着该方法既可以在 controller 中使用，也可以在 view 中使用，这样会 大大提高编码效率，减少视图层的重复代码，使代码更加清晰。

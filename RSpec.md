@@ -85,3 +85,8 @@ end
 let 方法，只要指定就会创建一个局部变量，visit/click_link 函数（177页）
 
 - [RSpec, Capybara, FactoryGirl的使用方法介绍](https://danielzhangqinglong.github.io/2015/03/03/rspec-capybara/)
+
+## 运行单例
+```
+rspec spec/controllers/webapp/resumes_controller_spec.rb
+```
