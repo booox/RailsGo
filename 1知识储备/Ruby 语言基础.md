@@ -7,6 +7,8 @@ puts #打印结果
 7.class => Fixnum  # 在Ruby裡面，萬物皆有類別。通过`XX.class`查看
 ```
 
+
+
 - 字符串
 ```
 ""  # 用双引号创建「字面量字符串」
@@ -56,6 +58,7 @@ Array 可以直接相加
 
 - Range
 ```
+
 (0..9).to_a  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 a = %w[foo bar baz quux]  # ["foo", "bar", "baz", "quux"]
@@ -201,4 +204,5 @@ Rails 中视图可自动获取
 user = User.new(name: "Michael Hartl", email: "mhartl@example.com")
 ```
 
+- `rand(xxx)` 产生 xxx位随机数
 

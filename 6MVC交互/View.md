@@ -11,9 +11,13 @@ ERb: Embedded Ruby （嵌入式 Ruby）
 # Layout 中
 <title>Ruby on Rails | <%= yield(:title) %></title>
 
+# 为 provide 提供默认值
+< title> < %= content_for?(:title) ? content_for(:title) : 'This is a default title' %> < /title>
+
 # 防止跨站请求伪造
 <%= csrf_meta_tags %>
 ```
+
 ## Tips
 - 取得数据的三种方式：
 ```
@@ -55,36 +59,6 @@ end
 <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 ```
 
-## 引用样式文件
-添加文件后需要在 `config/application.rb` 中添加，让 Asset Pipiline 兼容
-```
-require File.expand_path('../boot', __FILE__)
-
-# 引入 文件 app/assets/stylesheets/custom.css.scss
-@import "bootstrap";
-```
-
-- [由于引用两次ujs导致remote submit twith](http://stackoverflow.com/questions/7411271/form-submitted-twice-due-to-remote-true)
-
-## 文件存放路径
-```
-app/assets  # 存放当前程序用到的资源文件
-lib/assets  # 存放自己开发的代码库用到的资源文件
-vendor/assets  # 第三方代码库用到的资源文件
-```
-
-## 预处理
-foobar.js.erb.coffee  # 按照扩展名从右向左处理
-asset pipeline 默认合并压缩 css/js 文件
-
-## SCSS
-```
-&:hover {  # 引用父标签
-  ...
-}
-
-Bootstrap 中有颜色变量，以@开头，可直接在 SCSS 中替换$ 使用
-```
 
 ## navbar
 ```
@@ -99,3 +73,24 @@ Bootstrap 中有颜色变量，以@开头，可直接在 SCSS 中替换$ 使用
 ```
 :disable_with => "Submitting...."
 ```
+
+- img_path
+```
+# 获取文件经过 rails 解析后 url 地址
+<%= asset_path("rails.png") %>
+```
+
+## Simple_fome_for
+```
+<%= form_for :romantic_order, url:webapp_romantic_order_path(current_user.id), :html => {id: "cancle"}, method: :patch do |f| %>
+    ……
+<% end %>
+
+# <!--支付订单-->
+<%= simple_form_for :set_menu, method: :post, remote: true,
+                    url: webapp_romantic_order_pay_path(params[:id])  do |f| %>
+    <%= f.input :to_pay, as: :hidden, input_html: {name: "to_pay", value: true} %>
+    <button type＝"submit" style＝"display:none" id= "btn_pay"></button>
+<% end %>
+```
+

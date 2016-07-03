@@ -90,3 +90,26 @@ let 方法，只要指定就会创建一个局部变量，visit/click_link 函�
 ```
 rspec spec/controllers/webapp/resumes_controller_spec.rb
 ```
+
+## 针对某块内容的测试，可以预先生成公用数据
+```
+ describe 'test get_maturity' do
+      before :each do
+        @user = create(:user)
+        @resume = create(:resume, user_id: @user.id)
+        @education_experience = create(:education_experience, user_id: @user.id)
+        @expect_job = create(:expect_job, user_id: @user.id)
+      end
+
+      it "test maturity = 100" do
+        res = Resume.get_maturity @user.id
+        expect(res).to eq(100)
+      end
+    end
+```
+
+## 针对 Model 的测试
+```
+# 期待 create 结果不被限制
+expect(resume).not_to be_valid
+```

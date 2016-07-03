@@ -19,3 +19,31 @@ render json: {status: 'success', value: items}
 //= require turbolinks
 ```
 
+4. 401 权限限制问题
+- 第一种方案
+```
+# 关闭此 action 的 frogery 功能
+protect_from_forgery :except => [:create]
+```
+
+- 第二种方案
+ [protect_from_forgery & Unobtrusive Javascript](http://stackoverflow.com/questions/731504/protect-from-forgery-unobtrusive-javascript)
+```
+<script>
+  function authToken() {
+    return '<%= form_authenticity_token if protect_against_forgery? -%>';
+  }
+
+
+$.ajax({
+    type: 'put',
+    url:  url,
+    data: { foo: bar,
+            authenticity_token: authtoken()
+          },
+    complete: function(data) {}
+})
+</script>
+```
+
+

@@ -6,23 +6,18 @@ redirect_to controller: "merchants",action: "show", notice: "餐厅信息更新�
 redirect_to :back, notice: "恭喜您，删除成功！"
 ```
 
-## 命令
-```
-# 生成控制器，指定两个 Action
-rails generate controller StaticPages home help --no-test-framework
-
-# 撤销生成
-rails destroy  controller FooBars baz quux
-```
-
 ## 获得数据
 - 从关链表中取出数据
-```
-def show
-    @group = Group.find(params[:id])
-    @posts = @group.posts
-end
-```
+    ```
+    def show
+        @group = Group.find(params[:id])
+        @posts = @group.posts
+    end
+    ```
+- 如果不存在就新建一条数据
+    ```
+    resume = Resume.where(user_id: current_user.id).first_or_create!
+    ```
 
 ## 写入数据库
 - `build(app)` = `new(app)` # 别名？
@@ -46,3 +41,16 @@ end
 ```
 
 > before_action 和 before_filter 的区别 before_action 和 before_filter 其实是一个东西，只是在 Rails4.0 之前使用的是 before_filter，之后改成了 before_action，相当于功能一样，只是名字不同而已。
+
+## Strong Params
+```
+params.require(:person).permit(:name, :age)
+```
+
+## render partial
+
+```
+# 多用于，接收到 ajax 回传后，再次渲染局部模板，可带参数 如：`@comment`
+$('#comments ul.comments').append("<%= escape_javascript render(:partial => 'comments/single', :locals => { :c => @comment }) %>");
+
+```
