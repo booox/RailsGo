@@ -50,7 +50,10 @@ params.require(:person).permit(:name, :age)
 ## render partial
 
 ```
-# 多用于，接收到 ajax 回传后，再次渲染局部模板，可带参数 如：`@comment`
+#多用于，接收到 ajax 回传后，再次渲染局部模板，可带参数 如：`@comment`
 $('#comments ul.comments').append("<%= escape_javascript render(:partial => 'comments/single', :locals => { :c => @comment }) %>");
-
 ```
+## create 与 create!
+
+其中create和create!就等於new完就save和save!，
+有無驚嘆號的差別在於validate資料驗證不正確的動作，無驚嘆號版本會回傳布林值(true或false)，有驚嘆號版本則是驗證錯誤會丟出例外。

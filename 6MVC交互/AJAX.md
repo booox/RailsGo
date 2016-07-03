@@ -1,4 +1,10 @@
 # AJAX
+
+0. 须调用 jquery_ujs
+可在application.erb里加
+ ```
+   //= require jquery_ujs
+ ```
 1. 控制器
 ```
 unless items.nil?
@@ -12,6 +18,11 @@ render json: {status: 'success', value: items}
 
 
 - [Rails 开发：那些年，我们一起踩过的坑](http://talkcool.info/?p=19)
+-  pipiline
+```
+$(document).on 'page:load', ->if page is scrollPage   # pseudo code 
+    $(window).bind 'scroll', customScrollFunction$(document).one 'page:change', ->$(window).unbind 'scroll', customScrollFunction
+```
 
 3. 解决了ajax必须刷新才能加载问题
 ```

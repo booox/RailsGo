@@ -30,4 +30,24 @@ class Product < ActiveRecord::Base
 end
 ```
 
+## 限制
+```
+#设置字段不能为空
+validates :title, presence: true
 
+#可以为某个 action 设置
+validates :title, presence: true, on: :create
+
+# 另一种写法
+validates_presence_of :name
+```
+
+其中的validates_presence_of宣告了name這個屬性是必填
+```
+> e = Event.new
+> e.save # 回傳 false
+> e.errors.full_messages # 列出驗證失敗的原因
+> e.name = 'ihower'
+> e.save
+> e.errors.full_messages # 儲存成功，變回空陣列 []
+```
