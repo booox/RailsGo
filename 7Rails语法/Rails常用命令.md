@@ -33,6 +33,9 @@ rails g migration add_image_to_paintings image:string
 
 # 生成有 reference 关系的列
 rails g migration AddUserToUploads user:references
+
+# Migration檔案不需要和Model一一對應，像我們來新增一個Migration檔案來新增一個資料庫欄位
+$ rails g migration add_status_to_events
 ```
 
 ## 撤销某次生成
