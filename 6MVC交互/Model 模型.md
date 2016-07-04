@@ -30,7 +30,31 @@ class Product < ActiveRecord::Base
 end
 ```
 
-## 限制
+
+- 默认 scope scope 查询
+```
+default_scope { order('external_updated_at') }
+```
+
+- 模糊查询
+```
+hospitals = Hospital.where('name LIKE ?', "%#{name}%")
+```
+
+- 联合查询
+```
+  scope :filter_by_role, -> (role){
+    .joins(:roles).where('roles.name' => role)
+  }
+```
+
+## 设置字段serialize
+- 避免数据库转译后出现 \反斜矼
+```
+    serialize :prepaid_detail, JSON
+```
+
+## 验证
 ```
 #设置字段不能为空
 validates :title, presence: true
@@ -50,4 +74,8 @@ validates_presence_of :name
 > e.name = 'ihower'
 > e.save
 > e.errors.full_messages # 儲存成功，變回空陣列 []
+```
+
+```
+validates :price, presence: true
 ```

@@ -115,3 +115,28 @@ end
 ```
 你可以單獨用ruby -w去執行發生錯誤的程式，例如ruby -w app/controller/welcome_controller，這會打開Ruby的警告模式來獲得更準確的語法錯誤訊息。
 ```
+
+# DataBase 操作
+
+## 更新数据库
+```
+# 仅更新某列，过滤验证
+apply_record.update_columns(resume_status: params[:resume_status])
+```
+
+## Rails c 控制台常用操作
+1. 删除数据
+  ```
+  # 单条数据
+  MyTable.find(1).delete
+
+  # 多条数据
+  MyTalbe.where(user_id: 1).delete_all
+  ```
+
+
+  ##
+
+  ```
+  Post.where(published: true).joins(:comments).merge( Comment.where(spam: false) )
+  ```

@@ -57,3 +57,13 @@ $('#comments ul.comments').append("<%= escape_javascript render(:partial => 'com
 
 其中create和create!就等於new完就save和save!，
 有無驚嘆號的差別在於validate資料驗證不正確的動作，無驚嘆號版本會回傳布林值(true或false)，有驚嘆號版本則是驗證錯誤會丟出例外。
+
+
+## refresh
+```
+# 原来页面
+session[:return_to] ||= request.referer
+
+# update页面
+redirect_to session.delete(:return_to)
+```

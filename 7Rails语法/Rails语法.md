@@ -35,11 +35,38 @@ Time.at(@romantic_order.consume_time + 1.day - Time.now).utc.strftime("%H:%M:%S"
     ```
 
 ## Array
-    ```
-    # 将 nil 对象踢出！！！！
-    Array.wrap([nil])
-    # 带 index 的遍历
-      def count(array, status)
-        array.select{|i| i.status == status}.length
-      end
-    ```
+
+```
+# 将 nil 对象踢出！！！！
+Array.wrap([nil])
+# 带 index 的遍历
+  def count(array, status)
+    array.select{|i| i.status == status}.length
+  end
+```
+
+## array
+```
+@suggested_horses.include?(horse)
+```
+
+## date
+```
+# 获得今天星期几
+Time.now.wday
+
+# 日期转换
+Time.now.strftime("%Y-%m-%d %H:%M:%S")  #2016-05-23 14:32:32
+
+# 字符串 to Time
+return "2016-01-01".to_time
+
+# 获得本周开始日期
+Date.today.beginning_of_week
+
+# 获得本周开始时间
+Time.now.beginning_of_week
+
+# 获得今天开始
+Time.now.beginning_of_day
+```

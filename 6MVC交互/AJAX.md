@@ -20,7 +20,7 @@ render json: {status: 'success', value: items}
 - [Rails 开发：那些年，我们一起踩过的坑](http://talkcool.info/?p=19)
 -  pipiline
 ```
-$(document).on 'page:load', ->if page is scrollPage   # pseudo code 
+$(document).on 'page:load', ->if page is scrollPage   # pseudo code
     $(window).bind 'scroll', customScrollFunction$(document).one 'page:change', ->$(window).unbind 'scroll', customScrollFunction
 ```
 
@@ -57,4 +57,36 @@ $.ajax({
 </script>
 ```
 
+4. 返回json
+```
+render json: '审批失败，检查您是否勾选职位', status: 403
 
+
+      render json: {
+        success: true,
+        info: '审批成功',
+        jobs: @jobs
+      }, status: 200
+```
+
+
+## ajax submit form
+```
+// this is the id of the form
+$("#idForm").submit(function(e) {
+
+    var url = "path/to/your/script.php"; // the script where you handle the form input.
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: $("#idForm").serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               alert(data); // show response from the php script.
+           }
+         });
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+});
+```
