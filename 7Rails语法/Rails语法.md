@@ -70,3 +70,8 @@ Time.now.beginning_of_week
 # 获得今天开始
 Time.now.beginning_of_day
 ```
+
+## 判断非空
+- `present?` 可判断 [],{},"",都为空
+- `nil?`
+- `blank?`
