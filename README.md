@@ -10,10 +10,11 @@
 
 ## 本书地址
 
-- [Rails边学边记 On GitBook](https://boboidream.gitbooks.io/railsgo/content/)
+- [Rails边学边记 On GitBook](http://rails.zwb.io/)
 
 ## 版本更新
 
 ```
-2016-05-28  0.1版  完成目录调整
+2016-07-05 0.2版  将为知笔记内容导入
+2016-05-28 0.1版  完成目录调整
 ```
