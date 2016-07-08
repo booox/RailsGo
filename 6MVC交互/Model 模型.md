@@ -48,6 +48,11 @@ hospitals = Hospital.where('name LIKE ?', "%#{name}%")
   }
 ```
 
+- 模糊加联合
+```
+    includes(:user).where{(resumes.users.show_name =~  "%#{name}%")} if name.present?
+```
+
 ## 设置字段serialize
 - 避免数据库转译后出现 \反斜矼
 ```

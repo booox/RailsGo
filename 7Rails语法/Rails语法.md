@@ -75,3 +75,11 @@ Time.now.beginning_of_day
 - `present?` 可判断 [],{},"",都为空
 - `nil?`
 - `blank?`
+
+
+## SCSS文件中使用 assets
+```
+.right-bar-filler{
+    background:url(asset-path('right_bar_filler.jpg', image)) repeat-y;
+    padding-top:0px;}
+```
