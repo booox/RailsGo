@@ -50,6 +50,13 @@ Array.wrap([nil])
 @suggested_horses.include?(horse)
 ```
 
+##  JSON
+```
+JSON["calendars"].each do |key, value|
+  # working with value["busy"]...
+end
+```
+
 ## date
 ```
 # 获得今天星期几
@@ -82,4 +89,30 @@ Time.now.beginning_of_day
 .right-bar-filler{
     background:url(asset-path('right_bar_filler.jpg', image)) repeat-y;
     padding-top:0px;}
+```
+
+## string
+- 转换为 symble
+  ```
+  # 语法
+  str.intern => symbol
+  str.to_sym => symbol
+
+  # 例子
+  "Koala".intern         #=> :Koala
+  s = 'cat'.to_sym       #=> :cat
+  s == :cat              #=> true
+  s = '@cat'.to_sym      #=> :@cat
+  s == :@cat             #=> true
+  ```
+- 处理空格
+```
+# 去除两端空格
+"   I have leading and trailing white space   ".strip
+
+# 取出行内空格
+"I have white space".delete(' ')
+
+# regex 去除空格换行等
+"   I have leading and trailing white space   ".gsub(/\s+/, "")
 ```

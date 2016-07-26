@@ -30,7 +30,6 @@ class Product < ActiveRecord::Base
 end
 ```
 
-
 - 默认 scope scope 查询
 ```
 default_scope { order('external_updated_at') }
@@ -51,6 +50,13 @@ hospitals = Hospital.where('name LIKE ?', "%#{name}%")
 - 模糊加联合
 ```
     includes(:user).where{(resumes.users.show_name =~  "%#{name}%")} if name.present?
+```
+
+- 查询某列，得到一个数组
+```
+Person.pluck(:id) # SELECT people.id FROM people
+Person.uniq.pluck(:role) # SELECT DISTINCT role FROM people
+Person.where(:confirmed => true).limit(5).pluck(:id)
 ```
 
 ## 设置字段serialize

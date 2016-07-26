@@ -88,6 +88,7 @@ let 方法，只要指定就会创建一个局部变量，visit/click_link 函�
 
 ## 运行单例
 ```
+# 可从报错信息中获得这句话
 rspec spec/controllers/webapp/resumes_controller_spec.rb
 ```
 

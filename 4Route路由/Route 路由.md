@@ -29,3 +29,6 @@ _path和_url的差別在於前者是相對路徑，後者是絕對路徑
 ```
 get "/foo" => redirect("/bar")
 ```
+
+## 添加404
+- [添加404](http://jerodsanto.net/2014/06/a-step-by-step-guide-to-bulletproof-404s-on-rails/)
