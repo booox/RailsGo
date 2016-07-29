@@ -76,6 +76,25 @@ Time.now.beginning_of_week
 
 # 获得今天开始
 Time.now.beginning_of_day
+
+Time.now + 10.minutes
+Time.now + 10.seconds
+```
+
+- 将时间转换为 小时：分钟：秒
+```
+    def time_diff(start_time, end_time)
+      seconds_diff = (start_time - end_time).to_i.abs
+
+      hours = seconds_diff / 3600
+      seconds_diff -= hours * 3600
+
+      minutes = seconds_diff / 60
+      seconds_diff -= minutes * 60
+
+      seconds = seconds_diff
+      "#{hours.to_s.rjust(2, '0')}:#{minutes.to_s.rjust(2, '0')}:#{seconds.to_s.rjust(2, '0')}"
+    end
 ```
 
 ## 判断非空
